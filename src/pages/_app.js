@@ -1,5 +1,14 @@
-import '@/styles/globals.css'
+import '@/styles/globals.scss';
+import { Layout } from "@/components/Layout";
+import { WhatsappButton } from "@/components/Buttons"
+import NextNProgress from "nextjs-progressbar";
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+      <NextNProgress color="#ffa500" height={5} />
+      <Component {...pageProps} />
+      <WhatsappButton />
+    </Layout>
+  )
 }
