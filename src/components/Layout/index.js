@@ -25,7 +25,7 @@ export const Layout = ({ children }) => {
         const scrollTop = window.scrollY;
         const fixedClass =
             scrollTop >= 1
-                ? "fixed top-0 left-0 right-0 shadow shadow-xl transition-all bg-blue-600 max-h-24 z-50 flex justify-between p-7 items-center"
+                ? "fixed top-0 left-0 right-0 shadow shadow-xl transition-all bg-gray-300 max-h-24 z-50 flex justify-between p-7 items-center"
                 : "";
         setFixed(fixedClass);
     };
@@ -36,7 +36,7 @@ export const Layout = ({ children }) => {
                 className={
                     fixed
                         ? fixed
-                        : "flex justify-between p-7 w-full bg-blue-600 items-center max-h-24 shadow shadow-xl"
+                        : "flex justify-between p-7 w-full bg-gray-300 items-center max-h-24 transition-all shadow-xl"
                 }
             >
                 <Link href="/">
@@ -49,7 +49,7 @@ export const Layout = ({ children }) => {
 
             <main>{children}</main>
 
-            <footer className="bg-blue-600 flex flex-col items-center justify-center">
+            <footer className="bg-gray-300 flex flex-col items-center justify-center">
                 <div className="container flex flex-col sm:flex-row items-center justify-between text-white p-3">
 
 
