@@ -19,6 +19,7 @@ export function Slider() {
 
         <Swiper
             spaceBetween={30}
+            loop={true}
             centeredSlides={true}
             autoplay={{
                 delay: 10000,
@@ -27,11 +28,12 @@ export function Slider() {
             pagination={{
                 clickable: true,
             }}
+
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
         >
-            <SwiperSlide>
+            <SwiperSlide className="relative flex flex-col items-center justify-center">
                 <Image
                     className="object-cover object-center h-[36rem]"
                     src={sliderOne}
@@ -65,3 +67,14 @@ export function Slider() {
     );
 }
 
+/*<article className="absolute z-50 m-auto text-white top-10 text-center max-w-6xl">
+                    <h1 className="font-extrabold text-md sm:text-5xl my-3">
+                        Um acampamento de férias no Interior do Rio de Janeiro 90
+                        quilômetros do Aeroporto Santos Dumont
+                    </h1>
+
+                    <p className="font-bold text-sm sm:text-xl">
+                        Acampamento seguindo padrões e procedimentos da International
+                        Camping Fellowship
+                    </p>
+                </article> */

@@ -6,9 +6,9 @@ import NextNProgress from "nextjs-progressbar";
 export default function App({ Component, pageProps }) {
   return (
     <Layout>
-      <NextNProgress color="#ffa500" height={5} />
+      <NextNProgress color="blue" height={5} />
       <Component {...pageProps} />
-
+      <WhatsappButton />
     </Layout>
   )
 }

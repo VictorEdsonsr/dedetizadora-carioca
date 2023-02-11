@@ -1,17 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "../Navbar";
+import { FaInstagram, FaFacebook, FaPhone, FaWhatsapp } from "react-icons/fa"
 import { useState, useEffect } from "react";
 
 export const Layout = ({ children }) => {
     const [fixed, setFixed] = useState("");
 
-    const nav = [
-        { name: "Início", link: "/" },
-        { name: "Sobre Nós", link: "/Atividade" },
-        { name: "Serviços", link: "/Acampamento" },
-        { name: "Contatos", link: "/Contato" },
-    ];
     // on render, set listener
     useEffect(() => {
         window.addEventListener("scroll", isFixed);
@@ -49,24 +44,37 @@ export const Layout = ({ children }) => {
 
             <main>{children}</main>
 
-            <footer className="bg-gray-300 flex flex-col items-center justify-center">
-                <div className="container flex flex-col sm:flex-row items-center justify-between text-white p-3">
+            <footer className="flex flex-col items-center justify-center bg-blue-500 p-10">
+                <div className="container text-white flex flex-col sm:flex-row items-center justify-around ">
 
 
-                    <article className="my-5 sm:my-0 text-center sm:text-left">
-                        Está com dúvidas? <br />
-                        Adoramos conversar <br />
-                        Agende uma conversa com nossos <br />
-                        coordenadores e diretores
+                    <article className="my-5 sm:my-0 text-center">
+                        <h1 className="text-2xl mb-3">Contatos</h1>
+                        <div>
+                            <Link className="flex border-white border-solid border-2 rounded-full p-4 hover:bg-white hover:text-blue-500 transition-all mb-2" href="tel:+55929999999999">
+                                <FaPhone className="mr-2" size={20} />
+                                <span>(92)9 9999-9999</span>
+                            </Link>
+
+                            <Link className="flex border-white border-solid border-2 rounded-full p-4 hover:bg-white hover:text-blue-500 transition-all" href="">
+                                <FaWhatsapp className="mr-2 " size={20} />
+                                <span>(92)9 9999-9999</span>
+                            </Link>
+                        </div>
                     </article>
 
-                    <ul className="text-center sm:text-left">
-                        {nav.map((navLink, index) => (
-                            <li className="px-3 text-white hover:text-orange-500" key={index}>
-                                <Link href={navLink.link}>{navLink.name}</Link>
-                            </li>
-                        ))}
-                    </ul>
+
+                    <figure className="text-center my-5 sm:my-0 border-double py-12 sm:px-14 sm:py-0 border-white border-t-4 border-b-4 sm:border-t-0 sm:border-b-0 sm:border-r-4 sm:border-l-4">
+                        LOGO
+                    </figure>
+
+                    <article className="my-5 sm:my-0 text-center">
+                        <h1 className="text-2xl mb-5">Redes Sociais</h1>
+                        <div className="flex justify-around">
+                            <Link className="border-white border-solid border-2 rounded-full p-4 hover:bg-white hover:text-blue-500 transition-all" href="www.instagram.com"><FaInstagram size={22} /></Link>
+                            <Link className="border-white border-solid border-2 rounded-full p-4 hover:bg-white hover:text-blue-500 transition-all" href="www.facebook.com"><FaFacebook size={22} /></Link>
+                        </div>
+                    </article>
                 </div>
             </footer>
         </>
