@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import Slider from '@/components/Slider'
+import { Slider } from '@/components/Slider'
 import { FaMapMarkedAlt, FaCamera } from "react-icons/fa"
 
 const inter = Inter({ subsets: ['latin'] })

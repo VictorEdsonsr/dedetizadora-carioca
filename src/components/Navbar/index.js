@@ -16,13 +16,14 @@ export const Navbar = () => {
         <nav>
             <ul className={active ? styles.activeNavbar : styles.navbar}>
                 {nav.map((navLink, index) => (
-                    <li
-                        onClick={() => setActive(active ? !active : active)}
-                        className="px-3 text-white text-xl mx-4 hover:text-orange-500 "
-                        key={index}
-                    >
-                        <Link href={navLink.link}>{navLink.name}</Link>
-                    </li>
+                    <Link key={index} href={navLink.link}>
+                        <li
+                            onClick={() => setActive(active ? !active : active)}
+                            className="p-3 cursor-pointer font-mons text-xl mx-4 hover:text-white hover:bg-blue-500 rounded-full transition"
+                        >
+                            {navLink.name}
+                        </li>
+                    </Link>
                 ))}
             </ul>
 

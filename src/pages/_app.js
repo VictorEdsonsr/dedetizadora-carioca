@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
     <Layout>
       <NextNProgress color="#ffa500" height={5} />
       <Component {...pageProps} />
-      <WhatsappButton />
+
     </Layout>
   )
 }

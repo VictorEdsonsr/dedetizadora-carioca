@@ -9,7 +9,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'black-tra': 'rgba(0,0,0,0.5)',
+      },
+    },
+    fontFamily: {
+      'mons': ["'Montserrat'", "sans-serif"],
+    }
   },
   plugins: [],
 }
