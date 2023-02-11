@@ -7,9 +7,9 @@ export const Navbar = () => {
 
     const nav = [
         { name: "Início", link: "/" },
-        { name: "Sobre Nós", link: "/Atividade" },
+        { name: "Sobre Nós", link: "#empresa" },
         { name: "Serviços", link: "/Acampamento" },
-        { name: "Contatos", link: "/Contato" },
+        { name: "Contatos", link: "#contato" },
     ];
 
     return (

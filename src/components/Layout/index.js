@@ -44,7 +44,7 @@ export const Layout = ({ children }) => {
 
             <main>{children}</main>
 
-            <footer className="flex flex-col items-center justify-center bg-blue-500 p-10">
+            <footer id="contato" className="flex flex-col items-center justify-center bg-blue-500 p-10">
                 <div className="container text-white flex flex-col sm:flex-row items-center justify-around ">
 
 
